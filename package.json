@@ -9,7 +9,7 @@
     "test": "npm run test:lint",
     "commit": "git-cz",
     "changelog": "conventional-changelog --infile CHANGELOG.md --same-file --release-count 0 --preset angular",
-    "postchangelog": "git add CHANGELOG.md && git commit -m 'docs(CHANGELOG): append to changelog'",
+    "postchangelog": "git add CHANGELOG.md && git commit -m 'docs(CHANGELOG): append to changelog' && git push origin master",
     "build": "tsc",
     "preversion": "npm run build",
     "postversion": "git push origin master && git push origin --tags && npm publish && npm run changelog",
